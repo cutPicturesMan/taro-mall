@@ -120,9 +120,9 @@ class Index extends PureComponent {
     return (
       <View className='container'>
         <View className='search'>
-          <Navigator url='/pages/search/search' className='input'>
-            <AtIcon className='icon' size='18' color='#666' value='search' />
-            <Text className='txt'>商品搜索, 共{goodsCount}款好物</Text>
+          <Navigator url='/pages/search/search' className='search-input'>
+            <AtIcon className='search-icon' size='18' color='#666' value='search' />
+            <Text className='search-txt'>商品搜索, 共{goodsCount}款好物</Text>
           </Navigator>
         </View>
         <Swiper className='banner' indicatorDots autoplay interval='3000' duration='100'>
@@ -131,8 +131,8 @@ class Index extends PureComponent {
               return <SwiperItem key={item.id}>
                 {
                   item.link > 0 ? <Navigator url={`/pages/goods/goods?id=${item.link}`}>
-                    <Image className='img' src={item.url} />
-                  </Navigator> : <Image className='img' src={item.url} />
+                    <Image className='banner-img' src={item.url} />
+                  </Navigator> : <Image className='banner-img' src={item.url} />
                 }
               </SwiperItem>
             })
@@ -141,9 +141,9 @@ class Index extends PureComponent {
         <View className='m-menu'>
           {
             data.channel && data.channel.map(item => {
-              return <Navigator key={item.id} className='item' url={`/pages/category/category?id=${item.id}`}>
-                <Image className='img' src={item.iconUrl} />
-                <Text className='txt'>{item.name}</Text>
+              return <Navigator key={item.id} className='m-menu-item' url={`/pages/category/category?id=${item.id}`}>
+                <Image className='m-menu-img' src={item.iconUrl} />
+                <Text className='m-menu-txt'>{item.name}</Text>
               </Navigator>
             })
           }
