@@ -1,7 +1,7 @@
 import Taro , { Component } from '@tarojs/taro';
 import { View, Text , Image, Navigator} from '@tarojs/components';
 import { getAftersaleListApi } from '../../../services/aftersale';
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

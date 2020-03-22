@@ -8,7 +8,7 @@ import { addCart, cartFastAdd, getCartGoodsCount} from '../../services/cart';
 import { showErrorToast } from '../../utils/util';
 import {ImgWeChat, ImgFriend} from '../../static/images';
 
-import './index.less';
+import './index.scss';
 
 class Goods extends Component {
 

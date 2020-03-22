@@ -1,3 +1,19 @@
+const path = require('path')
+
+// NOTE 在 sass 中通过别名（@ 或 ~）引用需要指定路径
+const sassImporter = function(url) {
+  if (url[0] === '~' && url[1] !== '/') {
+    return {
+      file: path.resolve(__dirname, '..', 'node_modules', url.substr(1))
+    }
+  }
+
+  const reg = /^@styles\/(.*)/
+  return {
+    file: reg.test(url) ? path.resolve(__dirname, '..', 'src/styles', url.match(reg)[1]) : url
+  }
+}
+
 const config = {
   projectName: 'xiaochengxu-shop',
   date: '2020-2-22',
@@ -21,13 +37,18 @@ const config = {
       'transform-class-properties',
       'transform-object-rest-spread',
       ['transform-runtime', {
-          helpers: false,
-          polyfill: false,
-          regenerator: true,
-          moduleName: 'babel-runtime'
-        }
+        helpers: false,
+        polyfill: false,
+        regenerator: true,
+        moduleName: 'babel-runtime'
+      }
       ]
     ]
+  },
+  plugins: {
+    sass: {
+      importer: sassImporter
+    }
   },
   uglify: {
     enable: true,
@@ -36,6 +57,15 @@ const config = {
     }
   },
   defineConstants: {
+  },
+  alias: {
+    '@actions': path.resolve(__dirname, '..', 'src/actions'),
+    '@assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@constants': path.resolve(__dirname, '..', 'src/constants'),
+    '@reducers': path.resolve(__dirname, '..', 'src/reducers'),
+    '@styles': path.resolve(__dirname, '..', 'src/styles'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils')
   },
   mini: {
     postcss: {
@@ -76,8 +106,21 @@ const config = {
     }
   },
   h5: {
+    // NOTE H5 打包静态资源时带 hash 值，方便缓存、版本管理
     publicPath: '/',
     staticDirectory: 'static',
+    output: {
+      filename: 'js/[name].[hash].js',
+      chunkFilename: 'js/[name].[chunkhash].js'
+    },
+    imageUrlLoaderOption: {
+      limit: 5000,
+      name: 'static/images/[name].[hash].[ext]'
+    },
+    miniCssExtractPluginOption: {
+      filename: 'css/[name].[hash].css',
+      chunkFilename: 'css/[name].[chunkhash].css',
+    },
     esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
@@ -97,6 +140,9 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    sassLoaderOption: {
+      importer: sassImporter
     }
   }
 }

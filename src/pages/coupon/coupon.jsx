@@ -2,7 +2,7 @@ import Taro , { Component } from '@tarojs/taro';
 import { View, Text, ScrollView, Image} from '@tarojs/components';
 import {get as getGlobalData} from '../../global_data';
 import { couponReceive, getCouponListApi } from '../../services/coupon';
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

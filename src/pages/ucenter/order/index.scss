@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 page {
   height: 100%;
   width: 100%;
@@ -31,7 +33,7 @@ page {
 
 .orders-switch .item.active .txt {
   color: #ab956d;
-  border-bottom: 4px solid #ab956d;
+  @include border(bottom, 4px, solid, #ab956d);
 }
 
 .no-order {
@@ -73,7 +75,7 @@ page {
   line-height: 83.3px;
   margin-left: 31.25px;
   padding-right: 31.25px;
-  border-bottom: 1px solid #f4f4f4;
+  @include border(bottom, 1px, solid, #f4f4f4);
   font-size: 30px;
   color: #333;
 }
@@ -140,7 +142,7 @@ page {
   line-height: 103px;
   margin-left: 31.25px;
   padding-right: 31.25px;
-  border-top: 1px solid #f4f4f4;
+  @include border(top, 1px, solid, #f4f4f4);
   font-size: 30px;
   color: #333;
 }

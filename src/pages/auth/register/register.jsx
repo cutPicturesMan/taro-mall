@@ -4,7 +4,7 @@ import { AtIcon } from 'taro-ui';
 import {reg, regCaptcha} from '../../../services/auth';
 import {set as setGlobalData} from '../../../global_data'
 import * as check from '../../../utils/check';
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

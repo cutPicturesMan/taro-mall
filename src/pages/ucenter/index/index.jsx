@@ -4,7 +4,7 @@ import {bindPhone, logOut} from '../../../services/auth';
 import { getUserIndex } from '../../../services/user';
 import {set as setGlobalData, get as getGlobalData} from '../../../global_data';
 import * as images from '../../../static/images/index';
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

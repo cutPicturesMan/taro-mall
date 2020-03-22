@@ -2,7 +2,7 @@ import Taro , { Component } from '@tarojs/taro';
 import { View, Text , Button, Navigator} from '@tarojs/components';
 import { orderPrepay } from '../../services/order';
 import { showErrorToast } from '../../utils/util';
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

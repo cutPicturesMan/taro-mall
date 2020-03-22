@@ -6,7 +6,7 @@ import { showErrorToast } from '../../../utils/util';
 import * as check from '../../../utils/check';
 import { saveAddress } from '../../../services/address';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

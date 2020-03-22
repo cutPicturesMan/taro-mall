@@ -5,7 +5,7 @@ import { AtIcon, AtTag } from 'taro-ui';
 import { get as getGlobalData} from '../../global_data';
 import { couponReceive } from '../../services/coupon';
 
-import './index.less'
+import './index.scss'
 
 @connect(({ home, goods }) => ({
   data: home.data,

@@ -2,7 +2,7 @@ import Taro , { Component, clearStorage } from '@tarojs/taro';
 import { View, Text , Image, ScrollView, Navigator, Input, CheckboxGroup} from '@tarojs/components';
 import { AtIcon } from 'taro-ui';
 import { connect } from '@tarojs/redux';
-import './index.less';
+import './index.scss';
 
 @connect(({ search }) => ({
   helpKeyword: search.helpKeyword,

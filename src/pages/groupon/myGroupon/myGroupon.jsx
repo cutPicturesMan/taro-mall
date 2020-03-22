@@ -4,7 +4,7 @@ import { AtTag } from 'taro-ui';
 import { groupOnMy} from '../../../services/group';
 
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

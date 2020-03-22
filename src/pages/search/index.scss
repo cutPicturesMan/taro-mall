@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 page {
   min-height: 100%;
   background-color: #f4f4f4;
@@ -16,7 +18,7 @@ page {
   height: 91px;
   display: flex;
   background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  @include border(bottom, 1px, solid, rgba(0, 0, 0, 0.15));
   padding: 0 31.25px;
   font-size: 29px;
   color: #333;
@@ -133,7 +135,7 @@ page {
   line-height: 93px;
   font-size: 24px;
   color: #333;
-  border-bottom: 1px solid #f4f4f4;
+  @include border(bottom, 1px, solid, #f4f4f4);
 }
 
 .sort {
@@ -152,7 +154,7 @@ page {
   overflow: hidden;
   padding: 0 30px;
   display: flex;
-  border-bottom: 1px solid #d9d9d9;
+  @include border(bottom, 1px, solid, #d9d9d9);
 }
 
 .sort-box .item {
@@ -182,7 +184,7 @@ page {
   height: auto;
   overflow: hidden;
   padding: 40px 40px 0 0;
-  border-bottom: 1px solid #d9d9d9;
+  @include border(bottom, 1px, solid, #d9d9d9);
 }
 
 .sort-box-category .item {

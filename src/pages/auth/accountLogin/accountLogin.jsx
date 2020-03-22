@@ -4,7 +4,7 @@ import { AtIcon } from 'taro-ui';
 import {set as setGlobalData} from '../../../global_data';
 import { loginByAccount } from '../../../services/auth';
 // import { showErrorToast } from '../../../utils/util';
-import './index.less';
+import './index.scss';
 
 class AccountLogin extends Component {
 

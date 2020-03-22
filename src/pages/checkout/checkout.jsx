@@ -4,7 +4,7 @@ import { AtIcon } from 'taro-ui';
 import { cartCheckout, orderSubmit, orderPrepay } from '../../services/cart';
 import {showErrorToast} from '../../utils/util';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

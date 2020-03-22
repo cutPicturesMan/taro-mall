@@ -2,7 +2,7 @@ import Taro , { Component, closeBLEConnection } from '@tarojs/taro';
 import { View, Text , Navigator, ScrollView, Image} from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 
-import './index.less';
+import './index.scss';
 
 @connect(({catalog, goods}) => ({
   ...catalog,

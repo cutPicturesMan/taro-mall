@@ -5,7 +5,7 @@ import {get as getGlobalData} from '../../global_data';
 import { cartUpdate, cartDelete, cartChecked, getCartListApi } from '../../services/cart';
 
 
-import './index.less';
+import './index.scss';
 
 class Cart extends Component {
 

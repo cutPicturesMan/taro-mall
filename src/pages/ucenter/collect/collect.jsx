@@ -2,7 +2,7 @@ import Taro , { Component } from '@tarojs/taro';
 import { View , Image} from '@tarojs/components';
 import { collectAddOrDelete, getCollectListApi } from '../../../services/collect';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

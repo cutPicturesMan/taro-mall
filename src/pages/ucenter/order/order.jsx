@@ -3,7 +3,7 @@ import { View, Text , Image, Navigator} from '@tarojs/components';
 
 import {getOrderListApi} from '../../../services/order';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

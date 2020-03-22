@@ -5,7 +5,7 @@ import {set as setGlobalData} from '../../../global_data';
 
 import * as user from '../../../utils/user';
 
-import './index.less';
+import './index.scss';
 
 class Login extends Component {
 

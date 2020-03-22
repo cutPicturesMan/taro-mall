@@ -3,7 +3,7 @@ import { View, Text , Button} from '@tarojs/components';
 import { AtIcon } from 'taro-ui';
 import {getAddressListApi, deleteAddress} from '../../../services/address';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 

@@ -5,7 +5,7 @@ import { AtIcon } from 'taro-ui';
 import { getCouponMyList, couponExchange } from '../../../services/coupon';
 import {showErrorToast} from '../../../utils/util';
 
-import './index.less';
+import './index.scss';
 
 class Index extends Component {
 
