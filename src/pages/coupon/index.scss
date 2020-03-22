@@ -1,3 +1,4 @@
+@import "@styles/mixins.scss";
 page {
   background: #f4f4f4;
   min-height: 100%;
@@ -124,7 +125,7 @@ page {
 }
 
 .page .prev {
-  border-right: 1px solid #d9d9d9;
+  @include border(right, 1px, solid, #d9d9d9);
 }
 
 .page .disabled {

@@ -1,3 +1,4 @@
+@import "@styles/mixins.scss";
 page {
   height: 100%;
   min-height: 100%;
@@ -144,7 +145,7 @@ page {
   float: left;
   height: 164px;
   width: 672px;
-  border-bottom: 1px solid #f4f4f4;
+  @include border(bottom, 1px, solid, #f4f4f4);
 }
 
 .cart-view .item .img {
@@ -274,7 +275,7 @@ page {
   height: 94px;
   line-height: 94px;
   padding: 0 26px;
-  border-bottom: 1px solid #f4f4f4;
+  @include border(bottom, 1px, solid, #f4f4f4);
 }
 
 .cart-view .promotion .icon {

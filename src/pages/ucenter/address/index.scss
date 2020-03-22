@@ -1,3 +1,4 @@
+@import "@styles/mixins.scss";
 page {
   height: 100%;
   width: 100%;
@@ -20,7 +21,7 @@ page {
   height: 156.55px;
   align-items: center;
   display: flex;
-  border-bottom: 1px solid #dcd9d9;
+  @include border(bottom, 1px, solid, #dcd9d9);
 }
 
 .address-list .l {

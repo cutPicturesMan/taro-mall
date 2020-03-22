@@ -45,11 +45,14 @@ const config = {
       ]
     ]
   },
-  plugins: {
-    sass: {
-      importer: sassImporter
-    }
+  sass: {
+    importer: sassImporter
   },
+  // plugins: {
+  //   sass: {
+  //     importer: sassImporter
+  //   }
+  // },
   uglify: {
     enable: true,
     config: {

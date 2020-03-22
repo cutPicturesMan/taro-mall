@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 page {
   background: #f4f4f4;
   min-height: 100%;
@@ -40,7 +42,7 @@ page {
   overflow: hidden;
   background: #fff;
   padding-left: 30px;
-  border-top: 1px solid #e1e1e1;
+  @include border(top, 1px, solid, #e1e1e1);
 }
 
 .item {
@@ -48,11 +50,11 @@ page {
   width: 720px;
   background: #fff;
   padding: 30px 30px 30px 0;
-  border-bottom: 1px solid #e1e1e1;
+  @include border(bottom, 1px, solid, #e1e1e1);
 }
 
 .item:last-child {
-  border-bottom: 1px solid #fff;
+  @include border(bottom, 1px, solid, #fff);
 }
 
 .item .img {

@@ -1,3 +1,4 @@
+@import "@styles/mixins.scss";
 .container {
   background: #f9f9f9;
 }
@@ -13,7 +14,7 @@
   height: 84rpx;
   white-space: nowrap;
   background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  @include border(top, 1px, solid, rgba(0, 0, 0, 0.15));
   overflow: hidden;
 }
 
@@ -36,7 +37,7 @@
 
 .cate-nav .item.active .name {
   color: #ab956d;
-  border-bottom: 2px solid #ab956d;
+  @include border(bottom, 2px, solid, #ab956d);
 }
 
 .cate-item {
