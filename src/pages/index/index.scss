@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import "@styles/comm.scss";
 
 .search {
   height: 88px;
@@ -308,7 +308,7 @@
   width: 375px;
   height: 252px;
   overflow: hidden;
-  border-top: 1px solid #fff;
+  @include border(top, 1px, solid, #fff);
   margin-left: 1px;
 }
 

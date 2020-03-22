@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import "@styles/comm.scss";
 page {
   height: 100%;
   min-height: 100%;
@@ -258,8 +258,7 @@ page {
   height: 100%;
   text-align: center;
   line-height: 68.75px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  @include border((left, right), 1px, solid, #ccc);
   float: left;
 }
 
